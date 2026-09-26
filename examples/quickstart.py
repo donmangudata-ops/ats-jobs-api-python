@@ -9,7 +9,8 @@ Run:     APIFY_TOKEN=<YOUR_APIFY_TOKEN> python quickstart.py [company ...]
 A company can be a job board link, a website or a name, such as
 https://boards.greenhouse.io/stripe, linear.app or palantir.
 Your token is in Apify Console > Settings > API & Integrations.
-Price: $0.01 per company, up to 1,000 of its open jobs included.
+Price per company, up to 1,000 of its open jobs included: $0.01 until
+October 10, 2026, $0.045 from October 11, 2026, $0.12 planned from November 15, 2026.
 MAX_CHARGE_USD caps what this one run can cost.
 """
 
