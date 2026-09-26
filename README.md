@@ -50,7 +50,7 @@ from apify_client import ApifyClient
 client = ApifyClient(os.environ["APIFY_TOKEN"])
 companies = ["https://boards.greenhouse.io/stripe", "https://jobs.lever.co/palantir", "https://jobs.ashbyhq.com/openai"]
 run = client.actor("conserving_celerytop/live-career-page-jobs-api").call(
-    run_input={"companies": companies, "titleIncludes": ["engineer"]}, max_total_charge_usd=Decimal("0.10"))
+    run_input={"companies": companies, "titleIncludes": ["engineer"]}, max_total_charge_usd=Decimal("0.50"))
 for row in client.dataset(run.default_dataset_id).iterate_items():
     if row["rowType"] == "job":
         print(row["companySlug"], "|", row["title"], "|", row["location"], "|", row["url"])
@@ -68,7 +68,7 @@ python examples/quickstart.py stripe linear.app https://jobs.ashbyhq.com/openai
 This request starts a run, waits up to 300 seconds and returns the rows.
 
 ```bash
-curl -X POST "https://api.apify.com/v2/acts/conserving_celerytop~live-career-page-jobs-api/run-sync-get-dataset-items?maxTotalChargeUsd=0.10" \
+curl -X POST "https://api.apify.com/v2/acts/conserving_celerytop~live-career-page-jobs-api/run-sync-get-dataset-items?maxTotalChargeUsd=0.30" \
   -H "Authorization: Bearer $APIFY_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"companies": ["https://boards.greenhouse.io/stripe", "https://jobs.lever.co/palantir"], "postedSince": "7 days"}'
@@ -131,11 +131,11 @@ To use a token instead of OAuth, send the header `Authorization: Bearer <YOUR_AP
 
 ## Pricing
 
-$0.01 per company, including up to 1,000 of its open jobs, so 100 companies cost $1.00 (less on paid Apify plans: $0.0095 on Starter, $0.009 on Scale, $0.008 on Business). Each further 1,000 jobs of the same company costs $0.01. A later check with `onlyNewJobs` costs $0.002 per 1,000 open jobs on the board. Descriptions on Workday, Eightfold and 8 other boards cost $0.01 per 200 jobs, and are free on the rest. Invalid, unsupported and duplicate entries are free, and Apify platform usage is included. These are the prices in September 2026; the [Store page](https://apify.com/conserving_celerytop/live-career-page-jobs-api) has the current ones.
+Until October 10, 2026: $0.01 per company, including up to 1,000 of its open jobs, so 100 companies cost $1.00 (less on paid Apify plans: $0.0095 on Starter, $0.009 on Scale, $0.008 on Business). From October 11, 2026: $0.045 per company. Planned from November 15, 2026: $0.12 per company ($0.10 on Scale, $0.09 on Business). Each further 1,000 jobs of the same company costs $0.01. A later check with `onlyNewJobs` costs $0.002 per 1,000 open jobs on the board. Descriptions on Workday, Eightfold and 8 other boards cost $0.01 per 200 jobs, and are free on the rest. Invalid, unsupported and duplicate entries are free, and Apify platform usage is included. The other prices are those of September 2026; the [Store page](https://apify.com/conserving_celerytop/live-career-page-jobs-api) has the current ones.
 
 ## Related
 
-- [Tech Jobs Search](https://apify.com/conserving_celerytop/tech-jobs-search): search the open jobs of 574 tech, AI and remote-first companies by keyword, $1 per 1,000 matching jobs.
+- [Tech Jobs Search](https://apify.com/conserving_celerytop/tech-jobs-search): search the open jobs of 574 tech, AI and remote-first companies by keyword, $1 per 1,000 matching jobs, $1.15 from October 11, 2026.
 - [Live Jobs HTTP API](https://apify.com/conserving_celerytop/live-jobs-http-api): the same data in one GET or POST request.
 
 Questions and board requests: the **Issues** tab of the [Actor's page](https://apify.com/conserving_celerytop/live-career-page-jobs-api).
