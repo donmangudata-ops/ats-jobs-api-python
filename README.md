@@ -131,11 +131,11 @@ To use a token instead of OAuth, send the header `Authorization: Bearer <YOUR_AP
 
 ## Pricing
 
-Until October 10, 2026: $0.01 per company, including up to 1,000 of its open jobs, so 100 companies cost $1.00 (less on paid Apify plans: $0.0095 on Starter, $0.009 on Scale, $0.008 on Business). From October 11, 2026: $0.045 per company. Planned from November 15, 2026: $0.12 per company ($0.10 on Scale, $0.09 on Business). Each further 1,000 jobs of the same company costs $0.01. A later check with `onlyNewJobs` costs $0.002 per 1,000 open jobs on the board. Descriptions on Workday, Eightfold and 8 other boards cost $0.01 per 200 jobs, and are free on the rest. Invalid, unsupported and duplicate entries are free, and Apify platform usage is included. The other prices are those of September 2026; the [Store page](https://apify.com/conserving_celerytop/live-career-page-jobs-api) has the current ones.
+$0.045 per company, including up to 1,000 of its open jobs, so 100 companies cost $4.50 (less on paid Apify plans: $0.0428 on Starter, $0.0405 on Scale, $0.036 on Business). Each further 1,000 jobs of the same company costs $0.01. A later check with `onlyNewJobs` costs $0.002 per 1,000 open jobs on the board. Descriptions on Workday, Eightfold and 8 other boards cost $0.01 per 200 jobs, and are free on the rest. Invalid, unsupported and duplicate entries are free, and Apify platform usage is included. The [Store page](https://apify.com/conserving_celerytop/live-career-page-jobs-api) has the current price.
 
 ## Related
 
-- [Tech Jobs Search](https://apify.com/conserving_celerytop/tech-jobs-search): search the open jobs of 574 tech, AI and remote-first companies by keyword, $1 per 1,000 matching jobs, $1.15 from October 11, 2026.
+- [Tech Jobs Search](https://apify.com/conserving_celerytop/tech-jobs-search): search the open jobs of 824 startups and tech, AI, remote-first and European companies by keyword, $1.15 per 1,000 matching jobs.
 - [Live Jobs HTTP API](https://apify.com/conserving_celerytop/live-jobs-http-api): the same data in one GET or POST request.
 
 Questions and board requests: the **Issues** tab of the [Actor's page](https://apify.com/conserving_celerytop/live-career-page-jobs-api).
